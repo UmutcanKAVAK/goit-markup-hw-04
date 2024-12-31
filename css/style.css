@@ -1,172 +1,422 @@
-/* Basic resets */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+:root {
+  --iris: #4d5ae5;
+  --navy-blue: #2e2f42;
+  --ocean: #404bbf;
+  --slate: #434455;
+  --light_slate: #8e8f99;
+  --corn_flower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --green: #31d0aa;
 }
-body,
+
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 ul,
-li,
-p,
-figure,
-address {
+p {
   margin: 0;
   padding: 0;
 }
-ul {
-  list-style: none;
-}
 img {
   display: block;
+}
+
+ul {
+  list-style: none;
 }
 a {
   text-decoration: none;
 }
 
-/* Container */
-.container {
-  width: 1158px;
-  margin: 0 auto;
-}
-
-/* HEADER & NAV */
-.header-section {
-  /* box-shadow is inline in HTML to match the requirement exactly. */
-}
-
-/* The special link with 3+ letters & a hyphen => 'nav-rel' */
-.nav-rel {
-  position: relative; /* Required */
-  color: #404bbf; /* Required color */
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Required transition */
-}
-
-/* The ::after pseudo-element on that link */
-.nav-rel::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-}
-
-/* Another link example, not strictly required, but used in HTML */
-.nav-lnk {
-  color: #2e2f42;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* HERO-BUTTON => 'hero-btn' with background-color transition */
-.hero-btn {
-  background-color: #4d5ae5;
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.hero-btn:hover,
-.hero-btn:focus {
-  background-color: #31d0aa;
-}
-
-/* ICO-BOX => a class with 3+ letters & hyphen for the features <div> wrapping <svg> 
-   (In the HTML, we used "ico-box" inline styles, but let's define them here too) */
-.ico-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 112px;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  border: 1px solid #8e8f99;
-  margin-bottom: 8px;
-}
-
-/* FOURTH SECTION: 
-   1) The 1st item <li> has special hover box-shadow, border-radius 0 0 4px 4px,
-      plus <p> sliding up from translateY(100%) -> 0% 
-*/
-.card-item {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* The "first" item gets border-radius. 
-   In the HTML we used .card-1, or you can do .card-item:first-child {} */
-.card-1 {
-  border-radius: 0px 0px 4px 4px;
-}
-.card-1:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-/* The <p> in the same container as <img> => .card-desc 
-   starts at transform: translateY(100%) => set to 0% on hover. */
-.card-desc {
-  position: absolute;
-  top: 0;
+html,
+body {
+  width: 1440px;
+  background-color: #ffffff;
+  color: var(--slate);
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #f4f4fd;
-  padding: 40px 32px;
-  background-color: #4d5ae5;
-  width: 100%;
-  height: 100%;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.card-1:hover .card-desc {
-  transform: translateY(0%);
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* SOCIAL MEDIA LIST => .social-lst 
-   display: flex; justify-content: center; gap: 24px 
-   each .social-itm => width:40, height:40 
-   each .social-lnk => circle background, transition background-color
-*/
-.social-lst {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 16px; /* optional spacing */
+/* -----------NAVIGATION MENU---------- */
+.header-logo {
+  color: var(--iris);
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-right: 76px;
 }
-.social-itm {
-  width: 40px;
-  height: 40px;
+
+.header-logo-span {
+  color: var(--navy-blue);
 }
-.social-lnk {
+
+.nav-link {
+  color: var(--navy-blue);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--ocean);
+}
+
+.nav-link-address {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--slate);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link-address:hover,
+.nav-link-address:focus {
+  color: var(--ocean);
+}
+
+.header-section {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--corn_flower);
+  height: 72px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: #4d5ae5;
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-lnk:hover,
-.social-lnk:focus {
-  background-color: #404bbf;
-}
-.social-svg {
-  fill: #f4f4fd;
 }
 
-/* FOOTER 
-   Example: .footer-logo, .footer-wrap, etc. 
-   We have .footer-wrap with display:flex; align-items:baseline 
-   A second <div> with social items. 
-   Each circle is 24x24 icons => also a possible .socf-link with transition
-*/
-.socf-link:hover,
-.socf-link:focus {
-  background-color: #31d0aa;
+.header-section .container {
+  display: flex;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu-list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  padding: 24px 0;
+}
+.class-name-is-killing-me {
+  display: flex;
+  gap: 40px;
+  margin-left: 332px;
+}
+.nav-link-address {
+  padding: 24px 0;
+}
+
+/* ---------------HEADER SECTION AND------------------ */
+
+/* COVER SECTION STARTSS */
+
+.cover-section {
+  background-color: var(--navy-blue);
+  height: 600px;
+  display: flex;
+  padding: 188px 0;
+  background-image: linear-gradient(to bottom, #2e2f42b2 70%, #2e2f42b2 70%),
+    url("/images/people-office.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cover-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cover-section-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 48px;
+  max-width: 496px;
+}
+
+.cover-section-button {
+  background-color: var(--iris);
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 12px 24px;
+  min-width: 169px;
+  cursor: pointer;
+  height: 56px;
+}
+
+/* -------------features section ----------------- */
+
+.features-section {
+  height: 344px;
+  padding: 120px 0;
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+
+.features-item {
+  text-align: left;
+  width: calc((100%-72px) / 4);
+}
+
+/* ---svg----- */
+.icon {
+  width: 64px;
+  height: 64px;
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-list {
+  display: flex;
+  column-gap: 24px;
+  margin: 8px 16px 32px 16px;
+}
+
+.icon-item {
+  width: 40px;
+  height: 40px;
+  background-color: var(--iris);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-item:hover {
+  background-color: var(--ocean);
+}
+
+.icon-container {
+  background-color: var(--cloud);
+  border: 1px solid #8e8f99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 24px 100px;
+}
+.features-title {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+/* ------------------TEAM SECTION--------------- */
+.team-header {
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.team-section {
+  background-color: var(--cloud);
+  height: 732px;
+  padding: 120px 0;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+.team-title {
+  margin-bottom: 8px;
+}
+
+.team-card {
+  background-color: #fff;
+  box-shadow: 0px 2px 1px 0px #2e2f4214, 0px 1px 1px 0px #2e2f4229,
+    0px 1px 6px 0px #2e2f4214;
+}
+
+.team-card-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 32px;
+}
+/* -------------portfolio section---------------- */
+.portfolio-header {
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.portty {
+  position: relative;
+  overflow: hidden;
+  width: 360px;
+  height: 299px;
+}
+
+.project-card {
+  box-sizing: border-box;
+  padding: 40px 32px 40px 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 300px;
+  background-color: var(--iris);
+  transform: translatey(100%);
+  transition: transform 250ms ease-in-out;
+}
+.portty:hover .project-card {
+  transform: translateY(0);
+}
+.project-card p {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  max-width: 296px;
+  height: 96px;
+}
+.portfolio-section {
+  height: 1240px;
+  padding: 120px 0;
+}
+
+.portfolio-section .container {
+  height: 1000px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.portfolio-card {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover {
+  box-shadow: 0px 2px 1px 0px #2e2f4214;
+
+  box-shadow: 0px 1px 1px 0px #2e2f4229;
+
+  box-shadow: 0px 1px 6px 0px #2e2f4214;
+}
+
+.portfoli-card-info {
+  border-top: none;
+  border-width: 0px 1px 1px 1px;
+  /* Top, Right, Bottom, Left */
+  border-style: solid;
+  /* Define the style (solid, dashed, etc.) */
+  border-color: #e7e9fc;
+  /* Define the color */
+  padding: 32px 16px;
+}
+
+.heading-3 {
+  margin-bottom: 8px;
+}
+
+footer {
+  height: 312px;
+  background-color: var(--navy-blue);
+  padding: 100px 0;
+}
+
+.footer-class-section .container {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-logo {
+  color: var(--iris);
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.footer-logo-span {
+  color: var(--cloud);
+}
+
+.footer-description {
+  color: var(--cloud);
+  display: inline-block;
+  width: 264px;
+  height: 72px;
+}
+.social-heading {
+  margin-bottom: 16px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+
+.footer-social .icon-item:hover {
+  background-color: var(--green);
 }
