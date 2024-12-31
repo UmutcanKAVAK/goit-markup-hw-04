@@ -128,15 +128,16 @@ body {
 
 /* ---------------HEADER SECTION AND------------------ */
 
-/* COVER SECTION STARTSS */
+/* COVER SECTION STARTS */
 
 .cover-section {
   background-color: var(--navy-blue);
   height: 600px;
   display: flex;
   padding: 188px 0;
+  /* [CHANGED] Remove leading slash for GH Pages compatibility */
   background-image: linear-gradient(to bottom, #2e2f42b2 70%, #2e2f42b2 70%),
-    url("/images/people-office.jpg");
+    url("./images/people-office.jpg");
 
   background-size: cover;
   background-position: center;
@@ -191,9 +192,10 @@ body {
   gap: 24px;
 }
 
+/* [CHANGED] Fix calc spacing */
 .features-item {
   text-align: left;
-  width: calc((100%-72px) / 4);
+  width: calc((100% - 72px) / 4);
 }
 
 /* ---svg----- */
@@ -296,11 +298,12 @@ body {
   margin-bottom: 72px;
 }
 
+/* [CHANGED] .portty to match .project-card height */
 .portty {
   position: relative;
   overflow: hidden;
   width: 360px;
-  height: 299px;
+  height: 300px; /* was 299px, now 300px to match .project-card */
 }
 
 .project-card {
@@ -310,9 +313,9 @@ body {
   top: 0;
   left: 0;
   width: 360px;
-  height: 300px;
+  height: 300px; /* the same as .portty, so no sliver shows */
   background-color: var(--iris);
-  transform: translatey(100%);
+  transform: translateY(100%);
   transition: transform 250ms ease-in-out;
 }
 .portty:hover .project-card {
@@ -344,22 +347,17 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* [CHANGED] Combine repeated shadows into one line */
 .portfolio-card:hover {
-  box-shadow: 0px 2px 1px 0px #2e2f4214;
-
-  box-shadow: 0px 1px 1px 0px #2e2f4229;
-
-  box-shadow: 0px 1px 6px 0px #2e2f4214;
+  box-shadow: 0px 2px 1px 0px #2e2f4214, 0px 1px 1px 0px #2e2f4229,
+    0px 1px 6px 0px #2e2f4214;
 }
 
 .portfoli-card-info {
   border-top: none;
   border-width: 0px 1px 1px 1px;
-  /* Top, Right, Bottom, Left */
   border-style: solid;
-  /* Define the style (solid, dashed, etc.) */
   border-color: #e7e9fc;
-  /* Define the color */
   padding: 32px 16px;
 }
 

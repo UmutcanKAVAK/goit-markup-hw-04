@@ -20,6 +20,7 @@
     />
 
     <!-- Main Styles -->
+    <!-- [CHANGED] Make sure your CSS references use ./ (relative path) if in same folder -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -60,7 +61,7 @@
     </header>
 
     <main>
-      <!-- Main content goes here -->
+      <!-- Cover Section -->
       <section class="cover-section">
         <div class="container">
           <h1 class="cover-section-title">
@@ -70,17 +71,18 @@
         </div>
       </section>
 
+      <!-- Features Section -->
       <section class="features-section">
         <div class="container">
           <h2 class="visually-hidden">Pecularities</h2>
           <ul class="features-list">
             <li class="features-item">
               <div class="icon-container">
+                <!-- [CHANGED] xlink:href to ./images (relative) for GH Pages -->
                 <svg class="icon icon-satellite">
-                  <use xlink:href="images/icons.svg#icon-satellite"></use>
+                  <use xlink:href="./images/icons.svg#icon-satellite"></use>
                 </svg>
               </div>
-
               <h3 class="features-title">Strategy</h3>
               <p class="features text">
                 Our goal is to identify the business problem to walk away with
@@ -90,7 +92,7 @@
             <li class="features-item">
               <div class="icon-container">
                 <svg class="icon icon-clock-1">
-                  <use xlink:href="images/icons.svg#icon-clock-1"></use>
+                  <use xlink:href="./images/icons.svg#icon-clock-1"></use>
                 </svg>
               </div>
               <h3 class="features-title">Punctuality</h3>
@@ -102,7 +104,7 @@
             <li class="features-item">
               <div class="icon-container">
                 <svg class="icon icon-diagram-1">
-                  <use xlink:href="images/icons.svg#icon-diagram-1"></use>
+                  <use xlink:href="./images/icons.svg#icon-diagram-1"></use>
                 </svg>
               </div>
               <h3 class="features-title">Diligence</h3>
@@ -114,7 +116,7 @@
             <li class="features-item">
               <div class="icon-container">
                 <svg class="icon icon-astronaut">
-                  <use xlink:href="images/icons.svg#icon-astronaut-1"></use>
+                  <use xlink:href="./images/icons.svg#icon-astronaut-1"></use>
                 </svg>
               </div>
               <h3 class="features-title">Technologies</h3>
@@ -126,6 +128,8 @@
           </ul>
         </div>
       </section>
+
+      <!-- Team Section -->
       <section class="team-section">
         <div class="container">
           <h2 class="team-header">Our Team</h2>
@@ -146,22 +150,28 @@
                 <ul class="icon-list">
                   <li class="icon-item">
                     <svg class="social-icon">
-                      <use xlink:href="images/icons.svg#icon-instagram-2"></use>
+                      <use
+                        xlink:href="./images/icons.svg#icon-instagram-2"
+                      ></use>
                     </svg>
                   </li>
                   <li class="icon-item">
                     <svg class="social-icon">
-                      <use xlink:href="images/icons.svg#icon-twitter-1"></use>
+                      <use xlink:href="./images/icons.svg#icon-twitter-1"></use>
                     </svg>
                   </li>
                   <li class="icon-item">
                     <svg class="social-icon">
-                      <use xlink:href="images/icons.svg#icon-facebook-1"></use>
+                      <use
+                        xlink:href="./images/icons.svg#icon-facebook-1"
+                      ></use>
                     </svg>
                   </li>
                   <li class="icon-item">
                     <svg class="social-icon">
-                      <use xlink:href="images/icons.svg#icon-linkedin-1"></use>
+                      <use
+                        xlink:href="./images/icons.svg#icon-linkedin-1"
+                      ></use>
                     </svg>
                   </li>
                 </ul>
@@ -183,26 +193,28 @@
                     <li class="icon-item">
                       <svg class="social-icon">
                         <use
-                          xlink:href="images/icons.svg#icon-instagram-2"
-                        ></use>
-                      </svg>
-                    </li>
-                    <li class="icon-item">
-                      <svg class="social-icon">
-                        <use xlink:href="images/icons.svg#icon-twitter-1"></use>
-                      </svg>
-                    </li>
-                    <li class="icon-item">
-                      <svg class="social-icon">
-                        <use
-                          xlink:href="images/icons.svg#icon-facebook-1"
+                          xlink:href="./images/icons.svg#icon-instagram-2"
                         ></use>
                       </svg>
                     </li>
                     <li class="icon-item">
                       <svg class="social-icon">
                         <use
-                          xlink:href="images/icons.svg#icon-linkedin-1"
+                          xlink:href="./images/icons.svg#icon-twitter-1"
+                        ></use>
+                      </svg>
+                    </li>
+                    <li class="icon-item">
+                      <svg class="social-icon">
+                        <use
+                          xlink:href="./images/icons.svg#icon-facebook-1"
+                        ></use>
+                      </svg>
+                    </li>
+                    <li class="icon-item">
+                      <svg class="social-icon">
+                        <use
+                          xlink:href="./images/icons.svg#icon-linkedin-1"
                         ></use>
                       </svg>
                     </li>
@@ -226,26 +238,28 @@
                     <li class="icon-item">
                       <svg class="social-icon">
                         <use
-                          xlink:href="images/icons.svg#icon-instagram-2"
-                        ></use>
-                      </svg>
-                    </li>
-                    <li class="icon-item">
-                      <svg class="social-icon">
-                        <use xlink:href="images/icons.svg#icon-twitter-1"></use>
-                      </svg>
-                    </li>
-                    <li class="icon-item">
-                      <svg class="social-icon">
-                        <use
-                          xlink:href="images/icons.svg#icon-facebook-1"
+                          xlink:href="./images/icons.svg#icon-instagram-2"
                         ></use>
                       </svg>
                     </li>
                     <li class="icon-item">
                       <svg class="social-icon">
                         <use
-                          xlink:href="images/icons.svg#icon-linkedin-1"
+                          xlink:href="./images/icons.svg#icon-twitter-1"
+                        ></use>
+                      </svg>
+                    </li>
+                    <li class="icon-item">
+                      <svg class="social-icon">
+                        <use
+                          xlink:href="./images/icons.svg#icon-facebook-1"
+                        ></use>
+                      </svg>
+                    </li>
+                    <li class="icon-item">
+                      <svg class="social-icon">
+                        <use
+                          xlink:href="./images/icons.svg#icon-linkedin-1"
                         ></use>
                       </svg>
                     </li>
@@ -269,26 +283,28 @@
                     <li class="icon-item">
                       <svg class="social-icon">
                         <use
-                          xlink:href="images/icons.svg#icon-instagram-2"
-                        ></use>
-                      </svg>
-                    </li>
-                    <li class="icon-item">
-                      <svg class="social-icon">
-                        <use xlink:href="images/icons.svg#icon-twitter-1"></use>
-                      </svg>
-                    </li>
-                    <li class="icon-item">
-                      <svg class="social-icon">
-                        <use
-                          xlink:href="images/icons.svg#icon-facebook-1"
+                          xlink:href="./images/icons.svg#icon-instagram-2"
                         ></use>
                       </svg>
                     </li>
                     <li class="icon-item">
                       <svg class="social-icon">
                         <use
-                          xlink:href="images/icons.svg#icon-linkedin-1"
+                          xlink:href="./images/icons.svg#icon-twitter-1"
+                        ></use>
+                      </svg>
+                    </li>
+                    <li class="icon-item">
+                      <svg class="social-icon">
+                        <use
+                          xlink:href="./images/icons.svg#icon-facebook-1"
+                        ></use>
+                      </svg>
+                    </li>
+                    <li class="icon-item">
+                      <svg class="social-icon">
+                        <use
+                          xlink:href="./images/icons.svg#icon-linkedin-1"
                         ></use>
                       </svg>
                     </li>
@@ -299,6 +315,8 @@
           </ul>
         </div>
       </section>
+
+      <!-- Portfolio Section -->
       <section class="portfolio-section">
         <div class="container">
           <h2 class="portfolio-header">Our Portfolio</h2>
@@ -397,7 +415,7 @@
           >
           <p class="footer-description">
             Increase the flow of customers and sales for your business with
-            digital marketing & growth solutions.a
+            digital marketing &amp; growth solutions.a
           </p>
         </div>
 
@@ -407,22 +425,22 @@
             <ul class="icon-list">
               <li class="icon-item">
                 <svg class="social-icon">
-                  <use xlink:href="images/icons.svg#icon-instagram-2"></use>
+                  <use xlink:href="./images/icons.svg#icon-instagram-2"></use>
                 </svg>
               </li>
               <li class="icon-item">
                 <svg class="social-icon">
-                  <use xlink:href="images/icons.svg#icon-twitter-1"></use>
+                  <use xlink:href="./images/icons.svg#icon-twitter-1"></use>
                 </svg>
               </li>
               <li class="icon-item">
                 <svg class="social-icon">
-                  <use xlink:href="images/icons.svg#icon-facebook-1"></use>
+                  <use xlink:href="./images/icons.svg#icon-facebook-1"></use>
                 </svg>
               </li>
               <li class="icon-item">
                 <svg class="social-icon">
-                  <use xlink:href="images/icons.svg#icon-linkedin-1"></use>
+                  <use xlink:href="./images/icons.svg#icon-linkedin-1"></use>
                 </svg>
               </li>
             </ul>
