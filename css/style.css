@@ -136,7 +136,7 @@ body {
   display: flex;
   padding: 188px 0;
   background-image: linear-gradient(to bottom, #2e2f42b2 70%, #2e2f42b2 70%),
-    url("/images/people-office.jpg");
+    url("./images/people-office.jpg");
 
   background-size: cover;
   background-position: center;
